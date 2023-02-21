@@ -1,10 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
-from random import random
 from Clases.PeticionError import *
 from Clases.Predictor import *
 
-HOST = 'localhost'
+HOST = '0.0.0.0'
 PORT = 8081
 
 

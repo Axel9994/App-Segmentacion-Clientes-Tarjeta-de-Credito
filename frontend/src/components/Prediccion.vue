@@ -1,50 +1,37 @@
 <template>
     <div class="container">
-      <h1>App Segmentación de Clientes Tarjeta de Credito</h1>
+      <h1>App Segmentación de Clientes Tarjeta de Crédito</h1>
       <br/>
       <br/>
       <form @submit.prevent="onSubmit">
         <div class="row mb-3">
-          <label for="BALANCE" class="col-sm-2">Balance:</label>
-          <div class="col-sm-10">
-              <input type="text" class="form-control" id="BALANCE" name="BALANCE" v-model="BALANCE">
-          </div>
+          <label for="BALANCE">Balance:</label>
+          <input type="text" class="form-control" id="BALANCE" name="BALANCE" v-model="BALANCE">
+          
         </div>
         <div class="row mb-3">
-          <label for="PURCHASES" class="col-sm-2">Compras:</label>
-          <div class="col-sm-10">
-              <input type="text" class="form-control" id="PURCHASES" name="PURCHASES" v-model="PURCHASES">
-          </div>
+          <label for="PURCHASES">Compras:</label>
+          <input type="text" class="form-control" id="PURCHASES" name="PURCHASES" v-model="PURCHASES">
         </div>
         <div class="row mb-3">
-          <label for="CASH_ADVANCE" class="col-sm-2">Adelanto en Efectivo:</label>
-          <div class="col-sm-10">
-              <input type="text" class="form-control" id="CASH_ADVANCE" name="CASH_ADVANCE" v-model="CASH_ADVANCE">
-          </div>
+          <label for="CASH_ADVANCE" >Adelanto en Efectivo:</label>
+          <input type="text" class="form-control" id="CASH_ADVANCE" name="CASH_ADVANCE" v-model="CASH_ADVANCE">
         </div>
         <div class="row mb-3">
-          <label for="PURCHASES_FREQUENCY" class="col-sm-2">Frecuencia de Compras:</label>
-          <div class="col-sm-10">
-              <input type="text" class="form-control" id="PURCHASES_FREQUENCY" name="PURCHASES_FREQUENCY" v-model="PURCHASES_FREQUENCY">
-          </div>
+          <label for="PURCHASES_FREQUENCY">Frecuencia de Compras:</label>
+          <input type="text" class="form-control" id="PURCHASES_FREQUENCY" name="PURCHASES_FREQUENCY" v-model="PURCHASES_FREQUENCY">
         </div>
         <div class="row mb-3">
-          <label for="CASH_ADVANCE_FREQUENCY" class="col-sm-2">Frecuencia de Adelanto en Efectivo:</label>
-          <div class="col-sm-10">
-              <input type="text" class="form-control" id="CASH_ADVANCE_FREQUENCY" name="CASH_ADVANCE_FREQUENCY" v-model="CASH_ADVANCE_FREQUENCY">
-          </div>
+          <label for="CASH_ADVANCE_FREQUENCY" >Frecuencia de Adelanto en Efectivo:</label>
+          <input type="text" class="form-control" id="CASH_ADVANCE_FREQUENCY" name="CASH_ADVANCE_FREQUENCY" v-model="CASH_ADVANCE_FREQUENCY">
         </div>
         <div class="row mb-3">
-          <label for="CREDIT_LIMIT" class="col-sm-2">Limite de Credito:</label>
-          <div class="col-sm-10">
-              <input type="text" class="form-control" id="CREDIT_LIMIT" name="CREDIT_LIMIT" v-model="CREDIT_LIMIT">
-          </div>
+          <label for="CREDIT_LIMIT" >Limite de Crédito:</label>
+          <input type="text" class="form-control" id="CREDIT_LIMIT" name="CREDIT_LIMIT" v-model="CREDIT_LIMIT">
         </div>
         <div class="row mb-3">
-          <label for="PAYMENTS" class="col-sm-2">Pagos:</label>
-          <div class="col-sm-10">
-              <input type="text" class="form-control" id="PAYMENTS" name="PAYMENTS" v-model="PAYMENTS">
-          </div>
+          <label for="PAYMENTS">Pagos:</label>
+          <input type="text" class="form-control" id="PAYMENTS" name="PAYMENTS" v-model="PAYMENTS">
         </div>
         <br/>
         <button type="submit" class="btn btn-primary">Realizar Predicción</button>
@@ -52,7 +39,7 @@
       <br />
       <div v-if="prediccion" class="card">
         <div class="card-body">
-          <h5 class="card-title">Clusters # {{ prediccion.num_cluster }}</h5>
+          <h5 class="card-title">Clústers # {{ prediccion.num_cluster }}</h5>
           <p class="card-text">
             {{ prediccion.cluster_desc }}
           </p>
